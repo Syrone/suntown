@@ -1,0 +1,35 @@
+.result-header
+	margin-bottom: 4rem
+
+.result-main-button
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: flex-end
+	gap: 1.5rem
+	margin-bottom: 2.5rem
+	
+.result-list
+	max-width: 1300px
+	display: grid
+	grid-template-columns: repeat(3, minmax(320px, 1fr))
+	gap: 2rem 3.75rem
+	margin-bottom: 2rem
+
+.result-item-buttons
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 3.75rem
+	margin-top: 2rem
+
+	.btn
+		min-width: 140px
+		line-height: normal
+
+	.btn-primary
+		--_background: var(--primary-rgba-70)
+		--_background-active: var(--primary)
+
+		&:is(:hover, :focus-visible, :active, .is-active)
+			background-color: var(--_background-active)

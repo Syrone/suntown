@@ -1,0 +1,45 @@
+.card-result
+	--_background: var(--gray-color-light)
+	--_border-radius: 1.25rem
+	--_padding-y: 2.5rem
+	--_padding-x: 3.75rem
+	background-color: var(--_background)
+	border-radius: var(--_border-radius)
+	padding: var(--_padding-y) var(--_padding-x) .5rem var(--_padding-x)
+	text-align: center
+	position: relative
+
+	.card-info
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 2rem
+		min-height: 2rem
+		font-size: var(--font-size-sm)
+		font-weight: 900
+		line-height: normal
+		color: var(--primary)
+		padding: 0 .25rem
+		text-align: center
+		background-color: #fff
+		border-radius: 2rem
+		position: absolute
+		top: var(--_padding-y)
+		right: .75rem
+
+	.card-image
+		min-height: 180px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #fff
+		margin-bottom: 1rem
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	.card-text
+		font-size: var(--font-size-sm)

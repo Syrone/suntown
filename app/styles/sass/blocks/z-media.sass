@@ -85,6 +85,12 @@
 		img
 			height: 100px
 
+	.result-list
+		grid-template-columns: repeat(2, minmax(320px, 1fr))
+
+	.result-item-buttons
+		gap: 1.5rem
+
 @include media-breakpoint-down(lg)
 
 	.hero-buttons
@@ -94,11 +100,18 @@
 			max-width: initial
 			flex: 0 0 100%
 
+	.result-list
+		gap: 2rem
+
 @include media-breakpoint-down(md)
 
 	.lessons-filter-item.full-column .lessons-filter-buttons,
-	.lessons-filter
+	.lessons-filter,
+	.result-list
 		grid-template-columns: 1fr
+
+	.result-main-button
+		justify-content: center
 
 @include media-breakpoint-down(sm)
 
@@ -143,10 +156,15 @@
 @include media-breakpoint-up(xl)
 
 	.decoration-bg
-		background-image: url(../images/dist/hearts.jpg)
 		background-repeat: no-repeat
 		background-position: 95% 20px
 		background-size: 170px 150px
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: -1
 
 	.header
 
