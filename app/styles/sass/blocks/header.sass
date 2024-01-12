@@ -1,0 +1,36 @@
+.header
+
+	&-nav
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+
+.navbar-collapse
+	display: flex
+	flex: 0 0 100%
+
+	.nav-menu
+		display: flex
+
+		.nav-link
+			display: block
+			font-size: var(--font-size-md)
+			color: var(--dark-color)
+			padding: .75rem 1rem
+			text-transform: lowercase
+			text-decoration: none
+			transition: color var(--transition-duration) var(--transition-type)
+
+			&:is(:hover, :focus-visible, :active, .is-active)
+				color: var(--primary)
+
+.nav-logo
+	img
+		height: 140px
+		object-fit: contain
+
+.nav-buttons
+	display: flex
+	align-items: center
+	gap: 2rem

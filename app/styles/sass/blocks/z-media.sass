@@ -1,0 +1,146 @@
+@include media-breakpoint-down(xxl)
+
+	.navbar-collapse
+
+		.nav-menu
+
+			.nav-link
+				font-size: var(--font-size-sm)
+
+	
+	.footer
+
+		&-inner
+			gap: 1rem
+			padding-block: .5rem 1rem
+			
+			:not(.footer-lists)
+				flex: 0 0 calc( 50% - .5rem )
+
+		&-lists
+			flex-basis: 100%
+			gap: 1rem
+
+@include media-breakpoint-down(xl)
+
+	.navbar-collapse
+		width: 100%
+		max-width: 576px
+		height: 100%
+		flex-direction: column
+		gap: 1rem
+		background-color: #fff
+		padding: 1rem 2rem
+		box-shadow: var(--box-shadow)
+		position: fixed
+		top: 0
+		right: 0
+		z-index: 1050
+		transform: translateX(100%)
+		transition: transform var(--transition-duration) var(--transition-type)
+
+		&.is-open
+			transform: none
+
+		.navbar-button
+			align-self: flex-end
+
+		.nav-logo
+			align-self: center
+
+		.nav-menu,
+		.nav-buttons
+			flex-direction: column
+
+		.nav-menu
+			width: 100%
+			max-height: 500px
+			overflow-x: hidden 
+			overflow-y: auto 
+
+			.nav-link
+				padding: .75rem 0
+
+		.nav-buttons
+			width: 100%
+			gap: 1rem
+
+			&>*
+				width: inherit
+
+		.social-list
+			justify-content: center
+			order: 1
+
+	.nav-logo
+		margin-right: 0
+
+		img
+			height: 100px
+
+@include media-breakpoint-down(lg)
+
+	.hero-buttons
+		gap: 1.25rem 1.5rem
+
+		&>button
+			max-width: initial
+			flex: 0 0 100%
+
+@include media-breakpoint-down(sm)
+
+	.btn
+		font-size: var(--font-size)
+		padding: .75rem 1rem
+
+	.navbar-collapse
+		padding: 1rem
+
+	.hero-buttons
+
+		&>button
+			
+			&::before
+				width: 1.25rem
+				height: 1.25rem
+
+	.footer
+
+		&-inner
+			
+			:not(.footer-lists)
+				flex: 0 0 100%
+
+		&-lists
+			flex-wrap: wrap
+
+		&-list
+			flex: 0 0 100%
+
+@include media-breakpoint-up(xl)
+
+	.header
+
+		&-nav
+
+			&>.nav-logo,
+			&>.navbar-button
+				display: none
+
+	.navbar-collapse
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+
+		.nav-logo
+			margin-right: -10rem
+
+		.nav-menu
+			align-items: center
+			justify-content: space-between
+			flex: 0 0 100%
+			border-top: 1px solid #000
+			border-bottom: 1px solid #000
+
+		.navbar-button
+			display: none

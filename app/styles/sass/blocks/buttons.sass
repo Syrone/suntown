@@ -1,0 +1,69 @@
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: var(--font-size-sm)
+	color: var(--dark-color)
+	background-color: transparent
+	border-radius: 2rem
+	border: 1px solid transparent
+	padding: .75rem 2rem
+	text-decoration: none
+	cursor: pointer
+	outline: none
+	transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type)
+
+.btn-primary
+	color: var(--light-color)
+	background-color: var(--primary)
+	border-color: var(--primary)
+
+	// &:is(:hover, :focus-visible, :active, .is-active)
+
+.btn-secondary
+	background-color: var(--gray-color-light)
+
+.btn-gradient
+	--direction: to bottom
+	background-color: transparent
+	border: transparent
+	background-size: 100% 200%
+	background-image: linear-gradient(var(--direction), var(--gradient-color), var(--gradient-color), var(--gradient-color-40))
+
+	&:is(:hover, :focus-visible, :active, .is-active)
+		background-size: 100% 100%
+
+.btn-gradient-top
+	--direction: to top
+	background-size: 100% 100%
+	background-color: var(--gradient-color)
+
+	&:is(:hover, :focus-visible, :active, .is-active)
+		background-size: 100% 200%
+		background-color: transparent
+
+.btn-gradient.btn-primary
+	--gradient-color: var(--primary)
+	--gradient-color-40: var(--primary-rgba-40)
+
+.btn-gradient.btn-secondary
+	--gradient-color: var(--gray-color-light)
+	--gradient-color-40: rgba(217, 217, 217, 0.4)
+
+.btn-icon
+	color: #000
+	border-radius: 50%
+	padding: .75rem
+
+	.icon
+		--i-size: 1.75rem
+
+	&:is(:hover, :focus-visible, :active, .is-active)
+		color: var(--gray-color)
+
+	&.btn-primary
+		color: var(--light-color)
+
+		&:is(:hover, :focus-visible, :active, .is-active)
+			color: var(--primary)
+			background-color: transparent

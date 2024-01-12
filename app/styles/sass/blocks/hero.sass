@@ -1,0 +1,32 @@
+.hero-header
+	margin-bottom: 1rem
+	
+.hero-main
+	margin-bottom: 2rem
+	
+	p
+		margin: 0
+
+.hero-buttons
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	gap: 1.25rem 2.5rem
+	margin-bottom: 1rem
+
+	&>h2
+		flex: 0 0 100%
+		margin: 0
+		text-align: center
+
+	&>button
+		max-width: 400px
+		gap: .5rem
+		flex: 1
+
+		&::before
+			content: ''
+			display: block
+			width: 1.75rem
+			height: 1.75rem
+			background: url(../images/dist/icon-sun.png) no-repeat center / contain

@@ -1,0 +1,92 @@
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Inter', normal, 200, '../fonts/Inter-ExtraLight.woff2')
+@include font('Inter', normal, 300, '../fonts/Inter-Light.woff2')
+@include font('Inter', normal, 400, '../fonts/Inter-Regular.woff2')
+@include font('Inter', normal, 500, '../fonts/Inter-Medium.woff2')
+@include font('Inter', normal, 700, '../fonts/Inter-Bold.woff2')
+@include font('Inter', normal, 800, '../fonts/Inter-ExtraBold.woff2')
+@include font('Inter', normal, 900, '../fonts/Inter-Black.woff2')
+
+// GENERAL CSS SETTINGS
+:root
+	/*Colors*/
+	--primary: #E50A7F
+	--primary-rgb: 229, 10, 127
+	--primary-rgba-40: rgba(var(--primary-rgb), .4)
+	--text-color: #333
+	--light-color: #fff
+	--dark-color: #000
+	--gray-color: #666
+	--gray-color-light: #d9d9d9
+	--body-color: var(--dark-color)
+	--body-bg: #fff
+
+	/*Font*/
+	--font: Inter, sans-serif
+	--font-system: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+	--font-size-tiny: .625rem
+	--font-size: 1rem
+	--font-size-sm: 1.25rem
+	--font-size-md: 1.5rem
+	--font-size-lg: 1.75rem
+	--line-height: 1.5
+
+	--box-shadow: 0px 4px 50px 0px rgba(12, 16, 24, 0.15)
+
+	--transition-duration: 250ms
+	--transition-type: ease-in-out
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: var(--primary)
+	color: #fff
+
+html, body
+	overflow-x: hidden
+
+body
+	font-family: var(--font)
+	font-size: var(--font-size)
+	line-height: var(--line-height)
+	color: var(--body-color)
+	background-color: var(--body-bg, #fff)
+	min-width: 320px
+	position: relative
+
+h2
+	font-size: calc( var(--font-size-md) + .125rem )
+	font-weight: 500
+	margin-bottom: 1.25rem
+
+ul,
+li
+	list-style: none
+	padding: 0
+	margin: 0
+
+a
+	transition: color var(--transition-duration) var(--transition-type)
+
+p
+	font-size: calc( var(--font-size) + .125rem )
