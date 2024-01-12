@@ -1,27 +1,56 @@
 .btn
+	--_color: var(--dark-color)
+	--_color-active: var(--dark-color)
+	--_background: transparent
+	--_background-active:  transparent
+	--_border-color: transparent
+	--_border-color-active:  transparent
 	display: flex
 	align-items: center
 	justify-content: center
+	gap: .5rem
 	font-size: var(--font-size-sm)
-	color: var(--dark-color)
-	background-color: transparent
+	color: var(--_color)
+	background-color: var(--_background)
 	border-radius: 2rem
-	border: 1px solid transparent
+	border: 1px solid var(--_border-color)
 	padding: .75rem 2rem
 	text-decoration: none
 	cursor: pointer
 	outline: none
 	transition: color var(--transition-duration) var(--transition-type), background var(--transition-duration) var(--transition-type), border var(--transition-duration) var(--transition-type)
 
+	.icon,
+	.icon-image
+		--i-size: 2rem
+
+.btn-sm
+	font-size: calc( var(--font-size) + .125rem )
+	font-weight: 500
+	line-height: normal
+	padding: .25rem 1.5rem
+
+	.icon,
+	.icon-image
+		--i-size: 1.75rem
+
+.btn-link
+	font-size: calc( var(--font-size) - .125rem )
+	line-height: normal
+	padding: 0
+
+	&:is(:hover, :focus-visible, :active, .is-active)
+		color: var(--primary)
+
 .btn-primary
-	color: var(--light-color)
-	background-color: var(--primary)
-	border-color: var(--primary)
+	--_color: var(--light-color)
+	--_background: var(--primary)
+	--_border-color: var(--primary)
 
 	// &:is(:hover, :focus-visible, :active, .is-active)
 
 .btn-secondary
-	background-color: var(--gray-color-light)
+	--_background: var(--gray-color-light)
 
 .btn-gradient
 	--direction: to bottom
@@ -67,3 +96,21 @@
 		&:is(:hover, :focus-visible, :active, .is-active)
 			color: var(--primary)
 			background-color: transparent
+
+
+.download-buttons
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: flex-end
+	gap: .75rem
+	padding: .5rem 0
+
+.fancy-link
+	border-radius: initial
+	padding-bottom: .5rem
+	text-decoration: none
+	background-image: linear-gradient(90deg, currentColor, currentColor)
+	background-size: 100% 1px
+	background-repeat: no-repeat
+	background-position: left bottom

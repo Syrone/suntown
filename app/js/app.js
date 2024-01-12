@@ -3,6 +3,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	const navLinks = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.href;
+
+  navLinks.forEach(function(link) {
+    if (link.href === currentPage) {
+      link.classList.add('is-active');
+    }
+  });
+
 	const navbarButtons = document.querySelectorAll('.navbar-button');
 	const navbarCollapse = document.querySelector('.navbar-collapse');
 
@@ -27,5 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.addEventListener('popstate', function () {
 		navbarCollapse.classList.remove('is-open');
 	});
-
 })

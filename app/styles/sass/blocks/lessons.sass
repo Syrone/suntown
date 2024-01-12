@@ -1,0 +1,57 @@
+.lessons-header
+
+	h2
+		font-weight: 300
+		margin-bottom: 2.25rem
+
+.lessons-filter
+	display: grid
+	grid-template-columns: minmax(340px, .2fr) minmax(340px, 1fr)
+	gap: 2rem 6rem
+	margin-bottom: 1.25rem
+
+	.full-column
+		grid-column: -1 / 1
+
+.lessons-filter-item
+	display: flex
+	flex-direction: column
+	gap: 1.25rem
+
+	.btn-filter-header
+		max-width: 320px
+
+	&.full-column
+
+		.lessons-filter-buttons
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+
+.lessons-filter-buttons
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	gap: 1.25rem 1.5rem
+
+	.btn-primary
+		--_background: var(--primary-rgba-70)
+		--_background-active: var(--primary)
+		font-weight: 900
+		padding: .75rem 1.25rem
+
+		&:is(:hover, :focus-visible, :active, .is-active)
+			background-color: var(--_background-active)
+
+.lessons-filter-image
+	width: 100%
+	margin-top: 1rem
+
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+		object-position: center
+		border-radius: 2rem
+
+.lessons-main
+	margin-bottom: 2rem

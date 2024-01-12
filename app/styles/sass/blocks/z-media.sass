@@ -23,6 +23,13 @@
 
 @include media-breakpoint-down(xl)
 
+	.lessons-filter-item
+
+		&.full-column
+
+			.lessons-filter-buttons
+				grid-template-columns: repeat(2, 1fr)
+
 	.navbar-collapse
 		width: 100%
 		max-width: 576px
@@ -87,11 +94,27 @@
 			max-width: initial
 			flex: 0 0 100%
 
+@include media-breakpoint-down(md)
+
+	.lessons-filter-item.full-column .lessons-filter-buttons,
+	.lessons-filter
+		grid-template-columns: 1fr
+
 @include media-breakpoint-down(sm)
 
 	.btn
 		font-size: var(--font-size)
 		padding: .75rem 1rem
+
+	.btn-link
+		font-size: calc( var(--font-size) - .25rem )
+		padding: 0
+
+	.download-buttons
+		justify-content: center
+
+	.fancy-link
+		padding-bottom: .25rem
 
 	.navbar-collapse
 		padding: 1rem
@@ -118,6 +141,12 @@
 			flex: 0 0 100%
 
 @include media-breakpoint-up(xl)
+
+	.decoration-bg
+		background-image: url(../images/dist/hearts.jpg)
+		background-repeat: no-repeat
+		background-position: 95% 20px
+		background-size: 170px 150px
 
 	.header
 
