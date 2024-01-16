@@ -3,6 +3,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	/** (Start) Variables CSS **/
+	const transitionDuration = getComputedStyle(document.documentElement).getPropertyValue('--transition-duration').match(/\d+/)[0];
+	/** (End) Variables CSS **/
+
 	/** (Start) Active Nav Menu **/
 	const navLinks = document.querySelectorAll('.nav-link');
 	const currentPage = window.location.href;
@@ -53,25 +57,97 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	/** (End) Button Back **/
 
-	/** (Start) Set is-active Buttons Filter **/
-	const loaderFilters = document.querySelectorAll('[data-loader-filter]')
+	/** (Start) MixItUp **/
+	const mixerSectionConfig = {
+		classNames: {
+			elementFilter: 'control-section'
+		},
+		load: {
+			filter: '.progression'
+		},
+		selectors: {
+			control: '.mixitup-control-section',
+			target: '.control-section',
+		},
+		animation: {
+			duration: 250,
+			nudge: false,
+			reverseOut: false,
+			effects: "fade"
+		},
+		callbacks: {
+			onMixClick: function (state, originalEvent) {
+				const getText = originalEvent.target.innerText
+				const setTextButtons = document.querySelectorAll('[data-get-text="mixitup-control-section"]')
 
-	if (loaderFilters.length > 0) {
-		loaderFilters.forEach((wrapperFilter) => {
-			const buttonFilters = wrapperFilter.querySelectorAll('[data-filter]')
-
-			buttonFilters.forEach((button) => {
-				button.addEventListener('click', function () {
-					buttonFilters.forEach((btn) => {
-						btn.classList.remove('is-active');
-					});
-
-					button.classList.add('is-active');
-				});
-			});
-		});
+				setTextButtons.forEach(button => {
+					button.textContent = getText
+				})
+			}
+		}
 	}
+
+	const mixerBranchConfig = {
+		multifilter: {
+			enable: true,
+		},
+		selectors: {
+			control: '.mixitup-control-card',
+			target: '.control-card',
+		},
+		animation: {
+			duration: 250,
+			nudge: false,
+			reverseOut: false,
+			effects: "fade"
+		}
+	}
+	const catalogContents = document.querySelectorAll('.catalog-content');
+	const catalogMains = document.querySelectorAll('.catalog-main');
+	
+	catalogMains.forEach((card) => {
+		const mixerCatalog = mixitup(card, mixerSectionConfig);
+	});
+	
+	catalogContents.forEach((card) => {
+		const mixerBranch = mixitup(card, mixerBranchConfig);
+	});
+	
+	const setActiveButtons = document.querySelectorAll('.mixitup-control-section-active')
+	const getTextButtons = document.querySelectorAll('[data-get-text="mixitup-control-section"]')
+	setActiveButtons.forEach(button => {
+		const getText = button.innerText
+		
+		getTextButtons.forEach(button => {
+			button.textContent = getText
+		})
+	})
+
+	/** (End) MixItUp **/
+
 	/** (Start) Set is-active Buttons Filter **/
+	const containerFilters = document.querySelectorAll('[data-container-filter]')
+
+	if (containerFilters.length > 0) {
+		containerFilters.forEach((container) => {
+			const buttonFilters = container.querySelectorAll('[data-filter]')
+
+			setActiveButton(buttonFilters)
+		})
+	}
+
+	function setActiveButton(button) {
+		button.forEach((btn) => {
+			btn.addEventListener('click', function () {
+				button.forEach((btn) => {
+					btn.classList.remove('is-active')
+				})
+
+				btn.classList.add('is-active')
+			})
+		})
+	}
+	/** (End) Set is-active Buttons Filter **/
 
 	/** (Start) Save Value Filter **/
 	const saveButtons = document.querySelectorAll('[data-filters-save]')
@@ -118,6 +194,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	/** (End) Get Value Filter **/
+
+	/** (Start) Accordion **/
+
+	const accordions = document.querySelectorAll('.accordion')
+
+	if (accordions.length > 0) {
+		accordions.forEach((accordion) => {
+			const button = accordion.querySelector('.accordion-button')
+			const content = accordion.querySelector('.accordion-content')
+
+			button.addEventListener('click', () => {
+				if (!(accordion.classList.contains('is-open'))) {
+					content.style.width = content.scrollWidth + 'px';
+					setTimeout(() => {
+						content.style = '';
+					}, parseInt(transitionDuration));
+				}
+
+				accordion.classList.toggle('is-open');
+			});
+
+		})
+	}
+
+	/** (End) Accordion **/
 
 
 })

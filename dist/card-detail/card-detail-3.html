@@ -12,9 +12,9 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" href="images/favicon.png">
+	<link rel="icon" href="../images/favicon.png">
 	
-	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="../css/app.min.css">
 
 </head>
 
@@ -25,19 +25,19 @@
 		<nav class="header-nav">
 
 			<div class="nav-logo">
-				<img src="./images/dist/logo.png" alt="Logo">
+				<img src="../images/dist/logo.png" alt="Logo">
 			</div>
 
 			<button type="button" class="navbar-button btn btn-icon" data-target="open">
 				<svg class="icon icon-stroke">
-					<use xlink:href="./images/menu.svg#svg-menu"></use>
+					<use xlink:href="../images/menu.svg#svg-menu"></use>
 				</svg>
 			</button>
 
 			<div class="navbar-collapse">
 				<button type="button" class="navbar-button btn btn-icon" data-target="close">
 					<svg class="icon icon-solid">
-						<use xlink:href="./images/close.svg#svg-close"></use>
+						<use xlink:href="../images/close.svg#svg-close"></use>
 					</svg>
 				</button>
 
@@ -45,35 +45,35 @@
 					<li>
 						<button type="button" class="btn btn-primary btn-icon">
 							<svg class="icon icon-solid">
-								<use xlink:href="./images/vk.svg#svg-vk"></use>
+								<use xlink:href="../images/vk.svg#svg-vk"></use>
 							</svg>
 						</button>
 					</li>
 					<li>
 						<button type="button" class="btn btn-primary btn-icon">
 							<svg class="icon icon-solid">
-								<use xlink:href="./images/viber.svg#svg-viber"></use>
+								<use xlink:href="../images/viber.svg#svg-viber"></use>
 							</svg>
 						</button>
 					</li>
 					<li>
 						<button type="button" class="btn btn-primary btn-icon">
 							<svg class="icon icon-solid">
-								<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+								<use xlink:href="../images/telegram.svg#svg-telegram"></use>
 							</svg>
 						</button>
 					</li>
 					<li>
 						<button type="button" class="btn btn-primary btn-icon">
 							<svg class="icon icon-stroke">
-								<use xlink:href="./images/phone.svg#svg-phone"></use>
+								<use xlink:href="../images/phone.svg#svg-phone"></use>
 							</svg>
 						</button>
 					</li>
 				</ul>
 	
-				<a href="./index.html" class="nav-logo">
-					<img src="./images/dist/logo.png" alt="Logo">
+				<a href="../index.html" class="nav-logo">
+					<img src="../images/dist/logo.png" alt="Logo">
 				</a>
 	
 				<div class="nav-buttons">
@@ -87,17 +87,17 @@
 
 				<ul class="nav-menu">
 					<li>
-						<a href="./index.html" class="nav-link" aria-current="page">
+						<a href="../index.html" class="nav-link" aria-current="page">
 							О нас
 						</a>
 					</li>
 					<li>
-						<a href="./lessons.html" class="nav-link">
+						<a href="../lessons.html" class="nav-link">
 							Занятия
 						</a>
 					</li>
 					<li>
-						<a href="./afisha.html" class="nav-link">
+						<a href="../afisha.html" class="nav-link">
 							Афиша
 						</a>
 					</li>
@@ -139,90 +139,98 @@
 
 	<main class="main">
 
-		<div class="decoration-bg container" style="background-image: url(./images/dist/hearts.jpg)"></div>
+		<div class="decoration-bg container" style="background-image: url(../images/dist/hearts.jpg)"></div>
 
-		<section class="section-lessons">
+		<section class="section-detail">
 			<div class="container">
-				<header class="result-header text-center text-uppercase">
+				<header class="detail-header text-center text-uppercase">
 					<button type="button" class="btn btn-secondary btn-gradient btn-back text-uppercase">
 						<span class="icon-image">
-							<img src="./images/dist/arrow-left-solid.png" alt="Arrow left">
+							<img src="../images/dist/arrow-left-solid.png" alt="Arrow left">
 						</span>
 						Вернуться
 					</button>
+
+					<h2>
+						логопед
+						<span class="icon-image">
+							<img src="../images/dist/heart.jpg" alt="Heart">
+						</span>
+					</h2>
 				</header>
 
-				<div class="result-main">
-					<ul class="result-list"
-						data-loader-target>
-						<li
-							data-filter-target="UZR CZR 1-3 progression">
-							<div class="card card-result">
-								<span class="card-info">
-									1+
-								</span>
-								<div class="card-image">
-									<img src="" alt="Фото">
-								</div>
-								<p class="card-text">
-									вместе с мамой
-								</p>
-							</div>
-							<div class="result-item-buttons">
-								<a href="./card-detail/card-detail-1.html" class="btn btn-primary">
-									юзр
-								</a>
-								<a href="./card-detail/card-detail-1.html" class="btn btn-primary">
-									сзр
-								</a>
-							</div>
-						</li>
+				<div class="detail-main">
+					<div class="detail-hero">
+						<div class="detail-hero-start">
+							<ul class="detail-hero-list text-uppercase">
+								<li>
+									Возраст: <span>1-3 года</span>
+								</li>
+								<li>
+									Возможность занятий:
 
-						<li
-							data-filter-target="UZR 4-6 creativity">
-							<div class="card card-result">
-								<span class="card-info">
-									4+
-								</span>
-								<div class="card-image">
-									<img src="" alt="Фото">
-								</div>
-								<p class="card-text">
-									группа кратковременного пребывания
-								</p>
-							</div>
-							<div class="result-item-buttons">
-								<a href="./card-detail/card-detail-2.html" class="btn btn-primary">
-									юзр
-								</a>
-							</div>
-						</li>
+									<ul class="detail-hero-list--disc">
+										<li>
+											Абонемент на месяц
+										</li>
+										<li>
+											Индивидуальное занятие
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 
-						<li
-							data-filter-target="UZR 1-3 progression">
-							<div class="card card-result">
-								<span class="card-info">
-									3+
-								</span>
-								<div class="card-image">
-									<img src="" alt="Фото">
-								</div>
-								<p class="card-text">
-									логопед
-								</p>
-							</div>
-							<div class="result-item-buttons">
-								<a href="./card-detail/card-detail-3.html" class="btn btn-primary">
-									юзр
-								</a>
-							</div>
-						</li>
-					</ul>
+						<div class="detail-hero-middle">
+							<div class="wrapper-video">
 
-					<div class="result-main-button">
-						<a href="./catalog.html" class="btn btn-primary btn-gradient text-uppercase">
+							</div>
+						</div>
+
+						<div class="detail-hero-end">
+							<button type="button" class="btn btn-primary btn-gradient text-uppercase">
+								Записаться
+							</button>
+						</div>
+					</div>
+
+					<div class="detail-text">
+						<h3>
+							КУРС «логопед» СОСТОИТ ИЗ 2 БЛОКОВ:
+						</h3>
+						<ol class="list-number">
+							<li>
+								«Цветонотика»: <span class="text-underline">изо-деятельность</span>, двигательная разминка, игровая деятельность, музыкальный массаж.
+							</li>
+							<li>
+								«Сенсорика» - увлекательное занятие, направленное на сенсомоторное развитие ребенка.
+							</li>
+						</ol>
+					</div>
+
+					<div class="detail-text">
+						<h3>
+							ЧЕМУ НАУЧИТСЯ ВАШ МАЛЫШ
+						</h3>
+						<p>
+							Раннее развитие речи, четкость проговаривания слогов и слов, различение цветов, текстур, развитие общих и конкретных понятий окружающего мира и пройденного материала занятий. 
+						</p>
+					</div>
+
+					<div class="detail-text">
+						<h3>
+							НИКУДА БЕЗ ВЫСТУПЛЕНИЙ!
+						</h3>
+						<p>
+							На открытых праздничных занятиях мы будем показывать все, чему мы научились за последние несколько недель.
+						</p>
+					</div>
+					
+
+					<div class="detail-main-button">
+						<a href="../catalog.html" class="btn btn-primary btn-gradient text-uppercase">
 							<span class="icon-image">
-								<img src="./images/dist/icon-sun.png" alt="Sun">
+								<img src="../images/dist/icon-sun.png" alt="Sun">
 							</span>
 							Посмотреть все занятия
 						</a>
@@ -278,7 +286,7 @@
 				</ul>
 			</div>
 
-			<a href="./policy.html" class="footer-link">
+			<a href="../policy.html" class="footer-link">
 				Политика конфиденциальности
 			</a>
 
@@ -294,9 +302,9 @@
 </footer>
 </div>
 	
-	<script src="js/mixitup.min.js"></script>
-	<script src="js/mixitup-multifilter.js"></script>
-	<script src="js/app.min.js"></script>
+	<script src="..js/mixitup.min.js"></script>
+	<script src="..js/mixitup-multifilter.js"></script>
+	<script src="../js/app.min.js"></script>
 
 </body>
 </html>

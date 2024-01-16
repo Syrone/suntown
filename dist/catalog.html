@@ -1,0 +1,1397 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Солнечный город</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" href="css/app.min.css">
+
+</head>
+
+<body>
+<ul class="page">
+	<header class="header">
+	<div class="container">
+		<nav class="header-nav">
+
+			<div class="nav-logo">
+				<img src="./images/dist/logo.png" alt="Logo">
+			</div>
+
+			<button type="button" class="navbar-button btn btn-icon" data-target="open">
+				<svg class="icon icon-stroke">
+					<use xlink:href="./images/menu.svg#svg-menu"></use>
+				</svg>
+			</button>
+
+			<div class="navbar-collapse">
+				<button type="button" class="navbar-button btn btn-icon" data-target="close">
+					<svg class="icon icon-solid">
+						<use xlink:href="./images/close.svg#svg-close"></use>
+					</svg>
+				</button>
+
+				<ul class="social-list">
+					<li>
+						<button type="button" class="btn btn-primary btn-icon">
+							<svg class="icon icon-solid">
+								<use xlink:href="./images/vk.svg#svg-vk"></use>
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary btn-icon">
+							<svg class="icon icon-solid">
+								<use xlink:href="./images/viber.svg#svg-viber"></use>
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary btn-icon">
+							<svg class="icon icon-solid">
+								<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+							</svg>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary btn-icon">
+							<svg class="icon icon-stroke">
+								<use xlink:href="./images/phone.svg#svg-phone"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+	
+				<a href="./index.html" class="nav-logo">
+					<img src="./images/dist/logo.png" alt="Logo">
+				</a>
+	
+				<div class="nav-buttons">
+					<button type="button" class="btn btn-primary btn-gradient text-uppercase">
+						Записаться ЮЗР
+					</button>
+					<button type="button" class="btn btn-primary btn-gradient text-uppercase">
+						Записаться СЗР
+					</button>
+				</div>
+
+				<ul class="nav-menu">
+					<li>
+						<a href="./index.html" class="nav-link" aria-current="page">
+							О нас
+						</a>
+					</li>
+					<li>
+						<a href="./lessons.html" class="nav-link">
+							Занятия
+						</a>
+					</li>
+					<li>
+						<a href="./afisha.html" class="nav-link">
+							Афиша
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Праздники
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Галерея
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Отзывы
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Достижения
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Город добрых дел
+						</a>
+					</li>
+					<li>
+						<a href="#" class="nav-link">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+	<main class="main">
+
+		<section class="section-catalog">
+			<div class="container">
+				<header class="catalog-header">
+					<ul class="catalog-filter">
+						<li>
+							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
+								data-filter=".progression">
+								<span class="icon-image">
+									<img src="./images/dist/heart-bordered.jpg" alt="Heart">
+								</span>
+								Развитие
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
+								data-filter=".creativity">
+								<span class="icon-image">
+									<img src="./images/dist/heart-bordered.jpg" alt="Heart">
+								</span>
+								Творчество
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
+								data-filter=".dancing">
+								<span class="icon-image">
+									<img src="./images/dist/heart-bordered.jpg" alt="Heart">
+								</span>
+								Танцы
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
+								data-filter=".sport">
+								<span class="icon-image">
+									<img src="./images/dist/heart-bordered.jpg" alt="Heart">
+								</span>
+								Спорт
+							</button>
+						</li>
+					</ul>
+
+					<ul class="catalog-filter" data-filter-group>
+						<li>
+							<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+								data-filter=".uzr">
+								<span class="icon-image">
+									<img src="./images/dist/icon-sun.png" alt="Sun">
+								</span>
+								юзр
+							</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+								data-filter=".czr">
+								<span class="icon-image">
+									<img src="./images/dist/icon-sun.png" alt="Sun">
+								</span>
+								сзр
+							</button>
+						</li>
+					</ul>
+
+					<div class="wrapper-accordion">
+						<div class="catalog-filter accordion">
+							<button type="button" class="btn btn-primary accordion-button text-lowercase">
+								<span class="icon-image">
+									<img src="./images/dist/arrow-right-solid.png" alt="Arrow">
+								</span>
+								<span data-get-text="mixitup-control-section"></span>
+							</button>
+	
+							<ul class="accordion-content"
+								data-filter-group>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".one-three">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										1-3
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".four-six">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										4-6
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".seven-ten">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										7-10
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".eleven-thirteen">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										11-13
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".fourteen-eighteen">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										14-18
+									</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-primary text-uppercase mixitup-control-card"
+										data-filter=".eighteen-plus">
+										<span class="icon-image">
+											<img src="./images/dist/icon-sun.png" alt="Sun">
+										</span>
+										18+
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+
+				<div class="catalog-main">
+
+					<div class="catalog-content control-section progression">
+						<ul class="card-filter">
+							<li class="card card-full-image control-card uzr czr one-three" style="background-image: url();">
+								<span class="card-info">
+									1+
+								</span>
+								<p class="card-text">
+									Группа кратковременного пребывания
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr one-three" style="background-image: url();">
+								<span class="card-info">
+									1+
+								</span>
+								<p class="card-text">
+									раннее развитие
+									<br>
+									“Вместе с мамой”
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									3+
+								</span>
+								<p class="card-text">
+									логопед
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr four-six" style="background-image: url();">
+								<span class="card-info">
+									3+
+								</span>
+								<p class="card-text">
+									развивающая группа
+									<br>
+									“Гармоничный малыш”
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									английский
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									ментальная арифметика
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									робототехника
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									развивающая группа
+									<br>
+									“Словарики”
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="catalog-content control-section creativity">
+						<ul class="card-filter">
+							<li class="card card-full-image control-card uzr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									ИЗО
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									ВОКАЛ
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									робототехника
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									развивающая группа
+									<br>
+									“Словарики”
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="catalog-content control-section dancing">
+						<ul class="card-filter">
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									3+
+								</span>
+								<p class="card-text">
+									детский танец
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									ментальная арифметика
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									робототехника
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									развивающая группа
+									<br>
+									“Словарики”
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="catalog-content control-section sport">
+						<ul class="card-filter">
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									3+
+								</span>
+								<p class="card-text">
+									спортивная гимнастика
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									3+
+								</span>
+								<p class="card-text">
+									профилактика плоскостопия и здоровая спина
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr four-six" style="background-image: url();">
+								<span class="card-info">
+									4+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr seven-ten" style="background-image: url();">
+								<span class="card-info">
+									7+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr eleven-thirteen" style="background-image: url();">
+								<span class="card-info">
+									11+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card czr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										сзр
+									</a>
+								</div>
+							</li>
+							<li class="card card-full-image control-card uzr fourteen-eighteen" style="background-image: url();">
+								<span class="card-info">
+									14+
+								</span>
+								<p class="card-text">
+									...
+								</p>
+								<div class="card-buttons">
+									<a href="./card-detail/card-detail-1.html" class="btn btn-sm btn-primary">
+										юзр
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="download-buttons">
+						<a href="#" download class="btn btn-link fancy-link">
+							Скачать расписание ЮЗР
+						</a>
+						<a href="#" download class="btn btn-link fancy-link">
+							Скачать расписание ЮЗР
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+	<div class="container">
+		<div class="footer-inner">
+			<div class="footer-lists">
+				<ul class="footer-list">
+					<li>
+						<span>
+							428000, г. Чебоксары, ул. М. Залка, д. 11
+						</span>
+					</li>
+					<li>
+						<span>
+							Тел.
+						</span>
+						<a href="tel:+78352332291">(8352) 33-22-91</a>
+					</li>
+					<li>
+						<span>
+							Почта:
+						</span>
+						<a href="mailto:sgorod21@yandex.ru">sgorod21@yandex.ru</a>
+					</li>
+				</ul>
+	
+				<ul class="footer-list">
+					<li>
+						<span>
+							428000, г. Чебоксары, ул. Ф. Лукина, д. 6В
+						</span>
+					</li>
+					<li>
+						<span>
+							Тел.
+						</span>
+						<a href="tel:+78352332291">(8352) 54-55-55</a>
+					</li>
+					<li>
+						<span>
+							Почта:
+						</span>
+						<a href="mailto:sgorod21@yandex.ru">sgorod21@yandex.ru</a>
+					</li>
+				</ul>
+			</div>
+
+			<a href="./policy.html" class="footer-link">
+				Политика конфиденциальности
+			</a>
+
+			<button class="btn btn-secondary btn-gradient btn-gradient-top footer-btn text-lowercase">
+				Спросить нас
+			</button>
+		</div>
+
+		<div class="footer-copy">
+			© 2016-2020 Солнечный Город | Центр детского развития
+		</div>
+	</div>
+</footer>
+</div>
+	
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/mixitup-multifilter.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>

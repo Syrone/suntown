@@ -1,0 +1,71 @@
+.detail-header
+	position: relative
+	margin-block: .5rem 2rem
+
+	h2
+		display: block
+		max-width: 700px
+		font-size: var(--font-size-xl)
+		font-weight: 300
+		line-height: normal
+		margin: 0 auto
+
+	.btn-back
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+
+.detail-hero
+	display: flex
+	align-items: center
+	justify-content: space-between
+	gap: 2rem
+	margin-bottom: 1rem
+
+.detail-hero-list
+	font-size: var(--font-size)
+	font-weight: 500
+	line-height: 2.5rem
+	color: var(--text-color)
+
+	&--disc
+		list-style: disc
+		font-weight: 400
+		padding-left: 1.5rem
+
+		li
+			list-style: inherit
+
+.detail-hero-middle
+	max-width: 800px
+	flex: 1
+	background-color: var(--gray-color-light)
+
+.detail-hero-end
+	align-self: flex-end
+	margin-bottom: 1rem
+
+.detail-text
+
+	& + &
+		margin-top: 2.5rem
+
+	h3
+		font-size: calc( var(--font-size) + .125rem )
+		font-weight: 400
+		text-transform: uppercase
+
+	p
+		margin: 0
+
+		& + &
+			margin-top: 1rem
+
+.detail-main-button
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: flex-end
+	gap: 1.5rem
+	margin-block: 1rem 2rem

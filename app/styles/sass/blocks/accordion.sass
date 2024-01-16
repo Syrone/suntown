@@ -1,0 +1,42 @@
+.wrapper-accordion
+	flex-basis: 100%
+
+.accordion
+	width: fit-content
+	position: relative
+
+	.btn-primary
+		--_background: var(--primary-rgba-70)
+		--_background-active: var(--primary)
+
+		&:is(:hover, :focus-visible, :active, .is-active, .mixitup-control-active)
+			background-color: var(--_background-active)
+
+	&.is-open
+
+		.accordion-button
+			--_background: var(--primary)
+
+		.accordion-content
+			width: initial
+			opacity: 1
+			visibility: visible
+	
+.accordion-content
+	width: 0
+	max-width: 1100px
+	display: flex
+	align-items: center
+	gap: 1.5rem
+	opacity: 0
+	visibility: hidden
+	overflow-y: hidden 
+	overflow-x: auto
+	position: absolute
+	top: 0
+	left: calc( 100% + 2.5rem )
+	z-index: 1040
+	transition: width var(--transition-duration) var(--transition-type), height var(--transition-duration) var(--transition-type), padding var(--transition-duration) var(--transition-type), margin var(--transition-duration) var(--transition-type), opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type)
+
+	.btn
+		white-space: nowrap

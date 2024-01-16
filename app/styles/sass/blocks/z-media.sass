@@ -7,6 +7,13 @@
 			.nav-link
 				font-size: var(--font-size-sm)
 
+	.card-filter
+		max-width: 100%
+
+	.accordion-content
+		max-width: 80vw
+		top: calc( 100% + 1rem )
+		left: initial
 	
 	.footer
 
@@ -27,7 +34,7 @@
 
 		&.full-column
 
-			.lessons-filter-buttons
+			.catalog-filter
 				grid-template-columns: repeat(2, 1fr)
 
 	.navbar-collapse
@@ -91,6 +98,35 @@
 	.result-item-buttons
 		gap: 1.5rem
 
+	.detail-header
+
+		h2
+			max-width: 100%
+		
+		.btn-back
+			position: static
+			transform: none
+			margin-bottom: 1rem
+
+	.detail-hero
+		flex-direction: column
+		align-items: flex-start
+
+		&-middle
+			width: 100%
+			max-width: 100%
+			margin-inline: auto
+			order: -1
+
+		&-end
+			align-self: flex-start
+
+	.detail-main-button
+		justify-content: flex-start
+
+	.card-filter
+		gap: 1.5rem 1rem
+
 @include media-breakpoint-down(lg)
 
 	.hero-buttons
@@ -103,15 +139,21 @@
 	.result-list
 		gap: 2rem
 
+	.card-filter
+		grid-template-columns: repeat(3, minmax(220px, 1fr))
+
 @include media-breakpoint-down(md)
 
-	.lessons-filter-item.full-column .lessons-filter-buttons,
+	.lessons-filter-item.full-column .catalog-filter,
 	.lessons-filter,
 	.result-list
 		grid-template-columns: 1fr
 
 	.result-main-button
 		justify-content: center
+
+	.card-filter
+		grid-template-columns: repeat(2, minmax(220px, 1fr))
 
 @include media-breakpoint-down(sm)
 
@@ -139,6 +181,9 @@
 			&::before
 				width: 1.25rem
 				height: 1.25rem
+
+	.card-filter
+		grid-template-columns: 1fr
 
 	.footer
 

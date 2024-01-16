@@ -1,12 +1,12 @@
-.card-result
+.card
 	--_background: var(--gray-color-light)
 	--_border-radius: 1.25rem
-	--_padding-y: 2.5rem
-	--_padding-x: 3.75rem
+	--_padding-y: 1rem
+	--_padding-x: 1rem
+	height: 100%
 	background-color: var(--_background)
 	border-radius: var(--_border-radius)
-	padding: var(--_padding-y) var(--_padding-x) .5rem var(--_padding-x)
-	text-align: center
+	padding: var(--_padding-y) var(--_padding-x) var(--_padding-y) var(--_padding-x)
 	position: relative
 
 	.card-info
@@ -27,6 +27,40 @@
 		top: var(--_padding-y)
 		right: .75rem
 
+	.card-buttons
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		gap: .5rem
+
+		&>* + *
+			margin-left: auto
+
+		.btn-primary
+			--_background: var(--primary-rgba-70)
+			--_background-active: var(--primary)
+
+			&:is(:hover, :focus-visible, :active, .is-active)
+				background-color: var(--_background-active)
+
+		.btn-sm
+			font-size: var(--font-size)
+			font-weight: 200
+			line-height: 1
+			padding: .35rem 1rem
+
+
+.card-result
+	--_background: var(--gray-color-light)
+	--_border-radius: 1.25rem
+	--_padding-y: 2.5rem
+	--_padding-x: 3.75rem
+	background-color: var(--_background)
+	border-radius: var(--_border-radius)
+	padding: var(--_padding-y) var(--_padding-x) .5rem var(--_padding-x)
+	text-align: center
+
 	.card-image
 		min-height: 180px
 		display: flex
@@ -43,3 +77,23 @@
 
 	.card-text
 		font-size: var(--font-size-sm)
+
+.card-full-image
+	--_background: var(--gray-color-light)
+	--_border-radius: 1.25rem
+	--_padding-y: .5rem
+	--_padding-x: 2rem
+	min-height: 220px
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	padding: var(--_padding-y) var(--_padding-x) calc( var(--_padding-y) * 2 ) var(--_padding-x)
+	text-align: center
+
+	.card-text
+		min-height: 3.5ch
+		font-size: calc( var(--font-size-tiny) + .125rem )
+		font-weight: 500
+		line-height: normal
+		color: var(--text-color)
+		margin-bottom: .625rem
