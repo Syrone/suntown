@@ -3,10 +3,16 @@
 	--_border-radius: 1.25rem
 	--_padding-y: 1rem
 	--_padding-x: 1rem
+	width: 100%
 	height: 100%
+	display: flex
+	flex-direction: column
 	background-color: var(--_background)
+	border: 0
 	border-radius: var(--_border-radius)
 	padding: var(--_padding-y) var(--_padding-x) var(--_padding-y) var(--_padding-x)
+	text-decoration: none
+	outline: none
 	position: relative
 
 	.card-info
@@ -26,6 +32,22 @@
 		position: absolute
 		top: var(--_padding-y)
 		right: .75rem
+
+	.card-text
+
+		h4
+			font-size: var(--font-size)
+			font-weight: 700
+			line-height: 1.5
+			text-align: center
+			margin: 0
+		
+		p
+			font-size: inherit
+			margin: 0
+
+			& + &
+				margin-top: 1rem
 
 	.card-buttons
 		display: flex
@@ -97,3 +119,181 @@
 		line-height: normal
 		color: var(--text-color)
 		margin-bottom: .625rem
+
+.card-holiday
+	--_padding-y: 2.25rem
+	--_padding-x: 5rem
+	height: auto
+
+	.card-info
+		padding: 0
+		background-color: transparent
+		top: .25rem
+		right: 1.5rem
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+			object-position: center
+
+	.card-image
+		min-height: 200px
+		background-color: #fff
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	& ~ .card-text-outer
+		max-width: 180px
+		font-size: calc( var(--font-size-sm) + .125rem )
+		font-weight: 500
+		text-align: center
+		text-transform: uppercase
+		margin: 1.25rem auto 0
+		transition: color var(--transition-duration) var(--transition-type)
+
+	& ~ .card-button-outer
+		font-size: calc( var(--font-size-sm) + .125rem )
+		font-weight: 500
+		text-transform: uppercase
+		margin: 1.25rem auto 0
+
+	&:is(:hover, :focus-visible, :active)
+		color: var(--primary)
+
+		& ~ .card-text-outer
+			color: var(--primary)
+
+.card-gallery
+	--_padding-y: .75rem
+	--_padding-x: 1.5rem
+	padding-top: calc( var(--_padding-y) * 2 )
+	text-align: center
+
+	.card-image
+		display: flex
+		min-height: 140px
+		background-color: #fff
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	.card-text
+		font-size: calc( var(--font-size-tiny) + .125rem )
+		font-weight: 500
+		line-height: normal
+		color: var(--text-color)
+		margin-top: .625rem
+
+.card-reviews
+	--_border-radius: 0
+	--_padding-y: 0
+	--_padding-x: 0
+
+	.wrapper-video::before
+		padding-top: 56.5%
+
+.card-achievements
+	--_padding-y: 2.25rem
+	--_padding-x: 3.25rem
+	height: auto
+
+	.card-info
+		width: 2rem
+		height: 2rem
+		min-width: initial
+		min-height: initial
+		padding: 0
+		background-color: transparent
+		top: .75rem
+		right: .75rem
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+			object-position: center
+
+	.card-image
+		min-height: 200px
+		background-color: #fff
+		text-align: center
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	& ~ .card-text-outer
+		font-size: calc( var(--font-size-sm) + .125rem )
+		font-weight: 500
+		text-align: center
+		text-transform: uppercase
+		margin: 1.25rem auto 0
+		transition: color var(--transition-duration) var(--transition-type)
+
+	&:is(:hover, :focus-visible, :active)
+		
+		& ~ .card-text-outer
+			color: var(--primary)
+
+.card-bigger
+	--_padding-y: 3.5rem
+	--_padding-x: 2rem
+	transition: color var(--transition-duration) var(--transition-type)
+
+	.card-image
+		min-height: 320px
+		background-color: #fff
+		text-align: center
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+	.card-text
+		font-size: calc( var(--font-size-tiny) + .125rem )
+		font-weight: 500
+		line-height: normal
+		color: var(--text-color)
+		text-align: center
+		text-transform: uppercase
+		margin-top: 1.25rem
+		transition: color var(--transition-duration) var(--transition-type)
+
+a.card-bigger
+	padding-bottom: calc( var(--_padding-y) / 2 )
+
+	&:is(:hover, :focus-visible, :active)
+		color: var(--primary)
+
+		.card-text
+			color: var(--primary)
+		
+.card-photo
+	--_border-radius: 0
+	--_padding-y: 0
+	--_padding-x: 0
+
+	.card-image
+		min-height: 260px
+		background-color: var(--gray-color-light)
+		text-align: center
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+

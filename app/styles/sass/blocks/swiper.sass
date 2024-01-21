@@ -1,0 +1,90 @@
+.wrapper-swiper
+	--swiper-navigation-size: 3.125rem
+	--swiper-navigation-top-offset: 50%
+	--swiper-navigation-sides-offset: -.875rem
+	position: relative
+	margin-bottom: 2rem
+
+.wrapper-swiper-holiday-detail
+	--swiper-navigation-sides-offset: -5rem
+	max-width: 800px
+	margin: 0 auto 2rem
+
+.wrapper-swiper-reviews
+	--swiper-navigation-sides-offset: -5rem
+	margin-left: 10%
+	margin-right: 10%
+
+.wrapper-swiper-card,
+.swiper-image
+	--swiper-navigation-sides-offset: -5%
+	margin-left: 5%
+	margin-right: 5%
+
+.wrapper-swiper-card
+
+	.swiper-slide
+		height: auto
+
+.swiper-image-detail,
+.swiper-image-detail-thumb
+
+	.swiper-slide-image
+		text-align: center
+		position: relative
+		background-color: var(--gray-color-light)
+
+		&::before
+			content: ''
+			display: block
+			padding-top: 56.5%
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			position: absolute
+			top: 0
+			left: 0
+
+.swiper-image-detail-thumb
+	padding-top: 2rem
+
+.swiper-button-next,
+.swiper-button-prev
+	width: var(--swiper-navigation-size)
+	background-color: var(--gray-color-light)
+	margin-top: 0
+	border-radius: 50%
+	padding: .625rem
+	transform: translateY(-50%)
+
+	&::after
+		content: ''
+		font-family: initial
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-size: 2rem 2rem
+		background-position: center
+		position: absolute
+		top: 0
+		left: 0
+
+	&.swiper-button-disabled
+		opacity: 0
+
+.swiper-button-next
+
+	&::after
+		content: ''
+		font-family: initial
+		background-image: url(../images/dist/arrow-right-solid.png)
+
+.swiper-button-prev
+
+	&::after
+		content: ''
+		font-family: initial
+		background-image: url(../images/dist/arrow-left-solid.png)

@@ -1,0 +1,106 @@
+.modal
+	width: 100%
+	height: 100%
+	display: none
+	cursor: pointer
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+	overflow-x: hidden
+	overflow-y: auto
+	background-color: rgba(90, 90, 90, .65)
+
+.modal-dialog
+	width: 100%
+	max-width: 660px
+	min-height: calc( 100% - 5rem )
+	margin: 2.5rem auto
+	display: flex
+	align-items: center
+	pointer-events: none
+
+.modal-content
+	width: 100%
+	padding: 4rem 2rem
+	background-color: #fff
+	cursor: auto
+	pointer-events: auto
+	position: relative
+
+.modal-title
+	font-size: var(--font-size-lg)
+	font-weight: 300
+	line-height: normal
+	text-transform: uppercase
+	margin-bottom: 3.125rem
+
+.modal-body-inner
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	gap: 2.5rem
+
+	& > *
+		flex: 0 0 calc( 50% - 1.25rem )
+
+.modal-body-title
+	text-transform: uppercase
+	margin-bottom: 1.25rem
+
+.modal-image,
+.modal-text
+	max-width: 400px
+	margin-left: auto
+	margin-right: auto
+
+.modal-image
+	min-height: 260px
+	margin-bottom: 2rem
+	background-color: var(--gray-color-light)
+
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+
+.modal-text
+	font-size: var(--font-size-md)
+	font-weight: 500
+	line-height: normal
+	color: var(--text-color)
+
+	p
+		font-size: inherit
+		margin: 0
+
+		& + &
+			margin-top: 1rem
+
+.modal-close
+	min-width: 2rem
+	min-height: 2rem
+	font-size: var(--font-size-lg)
+	line-height: 1
+	margin: 0
+	padding: 0
+	position: absolute
+	top: 1rem
+	right: 1rem
+	z-index: 2
+
+
+.modal-swiper
+
+	.modal-dialog
+		max-width: 1168px
+		overflow: hidden
+
+	.modal-content
+		padding: 0
+		background-color: transparent
+
+		.wrapper-swiper
+			padding-top: 0
+			margin-bottom: 0

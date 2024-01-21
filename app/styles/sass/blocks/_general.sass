@@ -10,6 +10,19 @@
 	.main
 		flex: 1
 
+.page-header
+	position: relative
+
+	h2
+		font-weight: 300
+		margin-bottom: 2.25rem
+
+	.btn-back
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+
 .main
 	margin-top: 1.25rem
 	position: relative
@@ -49,11 +62,14 @@
 	text-align: center
 
 .text-uppercase
-	text-transform: uppercase
+	text-transform: uppercase !important
 
 .text-lowercase
-	text-transform: lowercase
+	text-transform: lowercase !important
 
 .text-underline
-	text-decoration: underline
+	text-decoration: underline !important
 	text-underline-offset: 0.25rem
+
+[data-modal-target]
+	cursor: pointer

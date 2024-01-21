@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 
@@ -14,19 +14,20 @@
 
 	<link rel="icon" href="images/favicon.png">
 	
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 
 </head>
 
 <body>
-<ul class="page">
+<div class="page">
 	<header class="header">
 	<div class="container">
 		<nav class="header-nav">
 
-			<div class="nav-logo">
+			<a href="./index.html" class="nav-logo">
 				<img src="./images/dist/logo.png" alt="Logo">
-			</div>
+			</a>
 
 			<button type="button" class="navbar-button btn btn-icon" data-target="open">
 				<svg class="icon icon-stroke">
@@ -77,12 +78,59 @@
 				</a>
 	
 				<div class="nav-buttons">
-					<button type="button" class="btn btn-primary btn-gradient text-uppercase">
-						Записаться ЮЗР
-					</button>
-					<button type="button" class="btn btn-primary btn-gradient text-uppercase">
-						Записаться СЗР
-					</button>
+					<div class="tooltip">
+						<button type="button" class="btn btn-primary btn-gradient text-uppercase tooltip-button">
+							Записаться ЮЗР
+						</button>
+
+						<div class="tooltip-dialog">
+							<div class="tooltip-content">
+								<ul class="social-list">
+									<li>
+										<button type="button" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="tooltip">
+						<button type="button" class="btn btn-primary btn-gradient text-uppercase tooltip-button">
+							Записаться СЗР
+						</button>
+
+						<div class="tooltip-dialog">
+							<div class="tooltip-content">
+								<ul class="social-list">
+									<li>
+										<button type="button" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<ul class="nav-menu">
@@ -92,9 +140,26 @@
 						</a>
 					</li>
 					<li>
-						<a href="./lessons.html" class="nav-link">
-							Занятия
-						</a>
+						<div class="dropdown">
+							<a href="./lessons.html" class="nav-link dropdown-button">
+								Занятия
+							</a>
+
+							<div class="dropdown-dialog">
+								<ul class="dropdown-content">
+									<li>
+										<a href="#" class="nav-link">
+											конструктор занятий
+										</a>
+									</li>
+									<li>
+										<a href="#" class="nav-link">
+											направления
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</li>
 					<li>
 						<a href="./afisha.html" class="nav-link">
@@ -102,32 +167,32 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./holidays.html" class="nav-link">
 							Праздники
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./gallery.html" class="nav-link">
 							Галерея
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./reviews.html" class="nav-link">
 							Отзывы
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./achievements.html" class="nav-link">
 							Достижения
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./town.html" class="nav-link">
 							Город добрых дел
 						</a>
 					</li>
 					<li>
-						<a href="#" class="nav-link">
+						<a href="./contacts.html" class="nav-link">
 							Контакты
 						</a>
 					</li>
@@ -141,7 +206,7 @@
 
 		<section class="section-catalog">
 			<div class="container">
-				<header class="catalog-header">
+				<div class="catalog-header">
 					<ul class="catalog-filter">
 						<li>
 							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
@@ -270,7 +335,7 @@
 							</ul>
 						</div>
 					</div>
-				</header>
+				</div>
 
 				<div class="catalog-main">
 
@@ -1326,6 +1391,70 @@
 			</div>
 		</section>
 
+		<div class="modal" id="modalAskUs">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">
+							Напишите нам
+						</h5>
+						<button type="button" class="btn modal-close" data-modal-dismiss="modal">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<div class="modal-body-inner">
+							<div class="modal-body-start">
+								<h4 class="modal-body-title">
+									Филлиал ЮЗР
+								</h4>
+	
+								<ul class="social-list">
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+	
+							<div class="modal-body-end">
+								<h4 class="modal-body-title">
+									Филлиал СЗР
+								</h4>
+	
+								<ul class="social-list">
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<footer class="footer">
@@ -1377,7 +1506,8 @@
 				Политика конфиденциальности
 			</a>
 
-			<button class="btn btn-secondary btn-gradient btn-gradient-top footer-btn text-lowercase">
+			<button class="btn btn-secondary btn-gradient btn-gradient-top footer-btn text-lowercase"
+				data-modal-target="#modalAskUs">
 				Спросить нас
 			</button>
 		</div>
@@ -1388,9 +1518,11 @@
 	</div>
 </footer>
 </div>
+
+<script src="js/mixitup.min.js"></script>
+<script src="js/mixitup-multifilter.min.js"></script>
 	
-	<script src="js/mixitup.min.js"></script>
-	<script src="js/mixitup-multifilter.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 
 </body>

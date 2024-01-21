@@ -104,25 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	const catalogContents = document.querySelectorAll('.catalog-content');
 	const catalogMains = document.querySelectorAll('.catalog-main');
-	
+
 	catalogMains.forEach((card) => {
 		const mixerCatalog = mixitup(card, mixerSectionConfig);
 	});
-	
+
 	catalogContents.forEach((card) => {
 		const mixerBranch = mixitup(card, mixerBranchConfig);
 	});
-	
+
 	const setActiveButtons = document.querySelectorAll('.mixitup-control-section-active')
 	const getTextButtons = document.querySelectorAll('[data-get-text="mixitup-control-section"]')
 	setActiveButtons.forEach(button => {
 		const getText = button.innerText
-		
+
 		getTextButtons.forEach(button => {
 			button.textContent = getText
 		})
 	})
-
 	/** (End) MixItUp **/
 
 	/** (Start) Set is-active Buttons Filter **/
@@ -195,6 +194,150 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	/** (End) Get Value Filter **/
 
+	/** (Start) Swiper **/
+
+	const swiperReviews = new Swiper('.swiper-reviews', {
+		slidesPerView: 3,
+		spaceBetween: 60,
+		grabCursor: true,
+		navigation: {
+			nextEl: '.swiper-reviews-next',
+			prevEl: '.swiper-reviews-prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			1400: {
+				slidesPerView: 3,
+				spaceBetween: 60,
+			}
+		}
+	})
+
+	const swiperCardBigger = new Swiper('.swiper-card', {
+		slidesPerView: 5,
+		spaceBetween: 48,
+		grabCursor: true,
+		navigation: {
+			nextEl: '.swiper-card-next',
+			prevEl: '.swiper-card-prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 32,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 32,
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 32,
+			},
+			1600: {
+				slidesPerView: 5,
+				spaceBetween: 48,
+			}
+		}
+	})
+
+	const swiperImage = new Swiper('.swiper-image', {
+		slidesPerView: 4,
+		spaceBetween: 48,
+		grabCursor: true,
+		navigation: {
+			nextEl: '.swiper-image-next',
+			prevEl: '.swiper-image-prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 32,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 32,
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 32,
+			},
+			1600: {
+				slidesPerView: 4,
+				spaceBetween: 48,
+			}
+		}
+	})
+
+	const swiperHolidayDetail = new Swiper('.swiper-holiday-detail', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		grabCursor: true,
+		navigation: {
+			nextEl: '.swiper-holiday-detail-next',
+			prevEl: '.swiper-holiday-detail-prev',
+		},
+	})
+
+	const swiperDetailImageThumb = new Swiper('.swiper-image-detail-thumb', {
+		slidesPerView: 4,
+		spaceBetween: 20,
+		grabCursor: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			400: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			576: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+		}
+	})
+
+	const swiperDetailImage = new Swiper('.swiper-image-detail', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		grabCursor: true,
+		thumbs: {
+			swiper: swiperDetailImageThumb,
+		},
+	})
+
+	/** (End) Swiper **/
+
 	/** (Start) Accordion **/
 
 	const accordions = document.querySelectorAll('.accordion')
@@ -220,5 +363,120 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	/** (End) Accordion **/
 
+	/** (Start) Modal **/
+	const modalButtons = document.querySelectorAll('[data-modal-target]');
+
+	function removePageScroll() {
+		document.documentElement.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function addPageScroll() {
+		document.documentElement.style.overflow = '';
+		document.body.style.overflow = '';
+	}
+
+	if (modalButtons.length > 0) {
+		modalButtons.forEach(function (button) {
+			button.addEventListener('click', function () {
+				const target = this.getAttribute('data-modal-target');
+				const modal = document.querySelector(target);
+
+				modal.style.display = 'block';
+				removePageScroll()
+			});
+		});
+	}
+
+	const closeModalButtons = document.querySelectorAll('[data-modal-dismiss="modal"]');
+
+	if (closeModalButtons.length > 0) {
+		closeModalButtons.forEach(function (button) {
+			button.addEventListener('click', function () {
+				const modal = button.closest('.modal');
+
+				modal.style.display = '';
+				addPageScroll()
+			});
+		});
+	}
+
+	const modals = document.querySelectorAll('.modal');
+
+	if (modals.length > 0) {
+		modals.forEach(function (modal) {
+			modal.addEventListener('click', function (event) {
+				if (event.target === modal) {
+					modal.style.display = '';
+					addPageScroll()
+				}
+			});
+	
+			document.addEventListener('keydown', function (event) {
+				if (event.key === 'Escape') {
+					modal.style.display = '';
+					addPageScroll()
+				}
+			});
+	
+			window.addEventListener('popstate', function (event) {
+				modal.style.display = '';
+				addPageScroll()
+			});
+		});
+	}
+	/** (End) Modal **/
+
+	/** (Start) Load Video **/
+
+	const wrapperVideo = document.querySelectorAll('.wrapper-video')
+
+	if (wrapperVideo.length > 0) {
+		wrapperVideo.forEach((item) => {
+			const preview = item.querySelector('.preview')
+	
+			function appendVideo(container, element) {
+				const srcVideo = element.getAttribute('data-src-video');
+				const srcYoutube = element.getAttribute('data-src-youtube');
+			
+				if (srcYoutube !== null && srcYoutube !== '') {
+					if (container.classList.contains('is-ready')) {
+						return;
+					}
+			
+					const iframeElement = document.createElement('iframe');
+					iframeElement.setAttribute('src', srcYoutube);
+					iframeElement.setAttribute('title', 'YouTube video player');
+					iframeElement.setAttribute('frameborder', '0');
+					iframeElement.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+					iframeElement.setAttribute('allowfullscreen', '');
+			
+					container.classList.add('is-ready');
+					container.appendChild(iframeElement);
+				} else if (srcVideo !== null && srcVideo.trim() !== '') {
+					if (container.classList.contains('is-ready')) {
+						return;
+					}
+			
+					const videoElement = document.createElement('video');
+					videoElement.setAttribute('controls', 'controls');
+			
+					const sourceElement = document.createElement('source');
+					sourceElement.setAttribute('src', srcVideo);
+					sourceElement.setAttribute('type', 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+			
+					container.classList.add('is-ready');
+					videoElement.appendChild(sourceElement);
+					container.appendChild(videoElement);
+				}
+			}
+	
+			preview.addEventListener('click', function () {
+				appendVideo(item, preview);
+			});
+		})
+	}
+
+	/** (End) Load Video **/
 
 })

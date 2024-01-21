@@ -1,13 +1,13 @@
 <!--#set var="title" value="Солнечный город" -->
 <!--#include virtual="/parts/head.html" -->
-<ul class="page">
+<div class="page">
 	<!--#include virtual="/parts/header.html" -->
 
 	<main class="main">
 
 		<section class="section-catalog">
 			<div class="container">
-				<header class="catalog-header">
+				<div class="catalog-header">
 					<ul class="catalog-filter">
 						<li>
 							<button type="button" class="btn btn-primary text-lowercase mixitup-control-section"
@@ -136,7 +136,7 @@
 							</ul>
 						</div>
 					</div>
-				</header>
+				</div>
 
 				<div class="catalog-main">
 
@@ -1192,8 +1192,75 @@
 			</div>
 		</section>
 
+		<div class="modal" id="modalAskUs">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">
+							Напишите нам
+						</h5>
+						<button type="button" class="btn modal-close" data-modal-dismiss="modal">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<div class="modal-body-inner">
+							<div class="modal-body-start">
+								<h4 class="modal-body-title">
+									Филлиал ЮЗР
+								</h4>
+	
+								<ul class="social-list">
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+	
+							<div class="modal-body-end">
+								<h4 class="modal-body-title">
+									Филлиал СЗР
+								</h4>
+	
+								<ul class="social-list">
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/viber.svg#svg-viber"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="btn btn-primary btn-icon">
+											<svg class="icon icon-solid">
+												<use xlink:href="./images/telegram.svg#svg-telegram"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<!--#include virtual="/parts/footer.html" -->
 </div>
+
+<script src="js/mixitup.min.js"></script>
+<script src="js/mixitup-multifilter.min.js"></script>
 <!--#include virtual="/parts/scripts.html" -->

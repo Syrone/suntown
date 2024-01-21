@@ -1,0 +1,31 @@
+.tooltip
+	position: relative
+
+	&:is(:hover, :focus-visible, :active)
+
+		.tooltip-dialog
+			opacity: 1
+			visibility: visible
+			z-index: 1
+
+.tooltip-dialog
+	width: 100%
+	padding-top: 1rem
+	position: absolute
+	position: absolute
+	top: 100%
+	left: 0
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+	transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type)
+
+.tooltip-content
+	position: absolute
+	top: 1rem
+	left: 50%
+	transform: translateX(-50%)
+	background-color: #fff
+	border-radius: 1rem
+	padding: .5rem
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2)

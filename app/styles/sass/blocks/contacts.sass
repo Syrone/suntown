@@ -1,0 +1,114 @@
+.section-contact
+	margin-bottom: 2.5rem
+
+	.download-buttons
+		justify-content: flex-start
+		margin-left: 3.125rem
+	
+.contact
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 3.125rem
+	margin-bottom: 1rem
+
+	&-title
+		font-size: var(--font-size-lg)
+		font-weight: 500
+		margin-bottom: 2rem
+
+	&-start
+		margin-top: 2.5rem
+
+	&-end
+
+		.map
+			height: calc( 100% - 2.5rem )
+
+.address,
+.contact-details
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	gap: 1.25rem
+
+.address
+	font-size: var(--font-size-sm)
+	font-weight: 500
+	margin-bottom: 2.5rem
+
+	&-phone
+		display: flex
+		gap: .25rem
+		font-weight: 400
+		margin-top: 1rem
+
+		a
+			font-size: inherit
+			font-weight: inherit
+			color: inherit
+
+.contact-details
+
+	&-title
+		display: flex
+		align-items: center
+		gap: .75rem
+		font-size: var(--font-size)
+		font-weight: 500
+		text-transform: uppercase
+
+		.wrap-icon
+			display: block
+			background-color: var(--primary)
+			border-radius: 50%
+			padding: .5rem
+
+		.icon
+			--i-size: 1.25rem
+			--i-color: var(--light-color)
+
+		.icon-solid
+			stroke: var(--primary)
+
+	&-list,
+	&-text
+		padding-left: 3.125rem
+
+	&-list
+		
+		li
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			gap: .25rem
+
+			&:not(:last-child)
+				margin-bottom: 1rem
+
+			a
+				font-size: inherit
+				font-weight: inherit
+
+	&-text
+		font-size: calc( var(--font-size-tiny) + .125rem )
+		line-height: 2
+
+		p
+			font: inherit
+			margin: 0
+
+			&:not(:last-child)
+				margin-bottom: 1.5rem
+
+.map-title
+	display: block
+	font-size: var(--font-size)
+	font-weight: 400
+	line-height: normal
+	margin-bottom: 1rem
+	border-bottom: 1px dashed #DD127D
+	padding-bottom: .5rem
+
+.map
+	width: 100%
+	height: 100%
+	min-height: 320px

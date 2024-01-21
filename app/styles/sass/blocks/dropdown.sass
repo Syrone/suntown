@@ -1,0 +1,43 @@
+.dropdown
+	position: relative
+
+	.dropdown-dialog
+
+		.dropdown-content
+
+			.nav-link
+				display: block
+				width: 100%
+				font-size: var(--font-size)
+				line-height: normal
+				padding: 0
+
+	&:is(:hover, :focus-visible, :active)
+
+		.dropdown-dialog
+			opacity: 1
+			visibility: visible
+			z-index: 5
+
+.dropdown-dialog
+	padding-top: .5rem
+	position: absolute
+	top: 100%
+	left: 0
+	z-index: -1
+	opacity: 0
+	visibility: hidden
+	transition: opacity var(--transition-duration) var(--transition-type), visibility var(--transition-duration) var(--transition-type)
+
+.dropdown-content
+	width: 100%
+	min-width: 200px
+	background-color: #fff
+	border-radius: 1rem
+	padding: 1rem .5rem
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+
+	& > li
+
+		&:not(:last-child)
+			margin-bottom: .5rem
