@@ -12,13 +12,21 @@
 	gap: 1.25rem 1.5rem
 
 	.btn-primary
-		--_background: var(--primary-rgba-70)
+		--_color: var(--dark-color)
+		--_background: var(--gray-color-light)
 		--_background-active: var(--primary)
+		--_border-color: var(--gray-color-light)
 		font-weight: 900
-		padding: .75rem 1.25rem
+		padding: .125rem 1.25rem
 
 		&:is(:hover, :focus-visible, :active, .is-active, .mixitup-control-section-active, .mixitup-control-active)
+			--_color: var(--light-color)
 			background-color: var(--_background-active)
+
+.catalog-filter--header.btn-primary
+	--_color: var(--light-color)
+	--_background: var(--primary)
+	cursor: auto
 
 .catalog-content
 	margin-bottom: 5rem

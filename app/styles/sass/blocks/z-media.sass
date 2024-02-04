@@ -303,7 +303,7 @@
 
 	.btn
 		font-size: var(--font-size)
-		padding: .75rem 1rem
+		padding: .5rem 1rem
 
 	.btn-link
 		font-size: calc( var(--font-size) - .25rem )
@@ -348,14 +348,23 @@
 		&::before
 			padding-top: 56.5%
 
+	.lessons-filter-item
+		
+		.btn-filter-header
+			padding: .15rem 1rem
+
 	.catalog-filter
 		width: 100%
 
-		& > *:not(.accordion-content)
+		& > *:not(.accordion-content, .catalog-filter--inner, .catalog-filter--header)
 			flex: 0 0 calc( 50% - .75rem )
 
 			& > .btn
 				width: 100%
+
+	.catalog-filter--header,
+	.catalog-filter--inner
+		flex-basis: 100%
 
 	.modal-close
 		font-size: var(--font-size-lg)
